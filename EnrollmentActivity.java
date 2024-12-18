@@ -46,12 +46,10 @@ public class EnrollmentActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 selectedClass = classes[position];
-                // Save the selected class in SharedPreferences
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("SELECTED_CLASS", selectedClass);
                 editor.apply();
 
-                // Navigate to SubjectListActivity
                 showSubjects(selectedClass);
             }
         });
