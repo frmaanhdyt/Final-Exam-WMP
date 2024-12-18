@@ -24,21 +24,17 @@ public class EnrollmentSummaryActivity extends AppCompatActivity {
         tableLayout = findViewById(R.id.subjectTableLayout);
         logoutButton = findViewById(R.id.logoutButton);
 
-        // Get the selected subjects and class from the intent
         ArrayList<String[]> selectedSubjects = (ArrayList<String[]>) getIntent().getSerializableExtra("SELECTED_SUBJECTS");
         String selectedClass = getIntent().getStringExtra("SELECTED_CLASS");
 
-        // Populate the table with selected subjects
         populateTable(selectedSubjects);
 
-        // Display the selected class
         TextView classTextView = new TextView(this);
         classTextView.setText("Selected Class: " + selectedClass);
         classTextView.setTextSize(18);
         classTextView.setPadding(16, 16, 16, 16);
         tableLayout.addView(classTextView, 0); // Add at the top of the table
 
-        // Set up the logout button
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,14 +46,12 @@ public class EnrollmentSummaryActivity extends AppCompatActivity {
 
 
     private void populateTable(ArrayList<String[]> subjects) {
-        // Add header row
         TableRow headerRow = new TableRow(this);
         headerRow.addView(createTextView("Number"));
         headerRow.addView(createTextView("Subject"));
         headerRow.addView(createTextView("Credits"));
         tableLayout.addView(headerRow);
 
-        // Add each subject to the table
         for (String[] subject : subjects) {
             TableRow tableRow = new TableRow(this);
             for (int j = 0; j < subject.length; j++) {
