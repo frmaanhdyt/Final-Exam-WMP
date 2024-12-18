@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_bg2_foreground"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/subjectListTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject List"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#0F52BA"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <LinearLayout
+        android:id="@+id/subjectContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subjectListTitle"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/totalCreditsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Credits: 0"
+        android:textSize="18sp"
+        android:layout_below="@id/subjectContainer"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_below="@id/totalCreditsTextView"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#3F51B5"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
+</RelativeLayout>

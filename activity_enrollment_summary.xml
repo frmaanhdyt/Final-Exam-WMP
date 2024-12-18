@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_bg2_foreground"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/summaryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enrollment Summary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#0F52BA"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <TableLayout
+        android:id="@+id/subjectTableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/summaryTitle"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_below="@id/subjectTableLayout"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#3F51B5"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
+</RelativeLayout>
