@@ -62,7 +62,7 @@ public class EnrollmentActivity extends AppCompatActivity {
                 return i;
             }
         }
-        return -1; // Not found
+        return -1;
     }
 
     private void showSubjects(String selectedClass) {
