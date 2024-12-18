@@ -29,7 +29,6 @@ public class EnrollmentActivity extends AppCompatActivity {
         classListView = findViewById(R.id.classListView);
 
 
-        // Load previously selected class
         selectedClass = sharedPreferences.getString("SELECTED_CLASS", null);
         if (selectedClass != null) {
             // Highlight the previously selected class
